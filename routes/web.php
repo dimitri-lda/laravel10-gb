@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use TCG\Voyager\Voyager;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,5 @@ Route::get('/', function () {
 
 
 Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
+    (new Voyager())->routes();
 });
